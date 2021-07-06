@@ -4,7 +4,7 @@ public class Exercicio03 {
 
 	public static void main(String[] args){
 		int numeros[] = new int[50];
-		int qtdEntre=0, qtdPar=0, qtdMenor=0, qtdImpar=0, num=0;
+		int qtdEntre=0, qtdPar=0, qtdMenor=0, qtdImpar=0;
 		Random gerador = new Random();
 		for (int i=0; i<numeros.length; i++) {
 			
@@ -26,14 +26,14 @@ public class Exercicio03 {
 				qtdImpar++;
 			}
 		}
-		System.out.println("A quantidade de números entre 3 e 7 é: " + qtdEntre);
-		System.out.println("A quantidade de números pares é: " + qtdPar);
-		System.out.println("A quantidade de números menores que 3 é: " + qtdMenor);
-		System.out.println("A quantidade de números impares é: " + qtdImpar);
-		System.out.println("O vetor final tem os seguintes números: ");
+		System.out.println("A quantidade de nÃºmeros entre 3 e 7 Ã©: " + qtdEntre);
+		System.out.println("A quantidade de numeros pares Ã©: " + qtdPar);
+		System.out.println("A quantidade de nÃºmeros menores que 3 Ã©: " + qtdMenor);
+		System.out.println("A quantidade de nÃºmeros impares Ã©: " + qtdImpar);
+		System.out.println("O vetor final tem os seguintes nÃ©meros: ");
 		
 		for (int i=0 ; i<numeros.length; i++) {
-			System.out.println("Número "+ (i+1) + " : " + numeros[i]);	
+			System.out.println("NÃºmero "+ (i+1) + " : " + numeros[i]);	
 		}
 	}
 }
