@@ -21,7 +21,7 @@ public class Exercicio04 {
 			"Para calcular o valor total da compra, digite 3\n" + 
 			"Para exibir a quantidade de produtos comprados, digite 4 \n" + 
 			"Exibir o nome do produto com maior valor, digite 5\n" +
-			"Exibir o nome de cada produto ao lado de seu preÃ§o, digite 6 \n" + 
+			"Exibir o nome de cada produto ao lado de seu preço, digite 6 \n" + 
 			"Deseja sair do programa? Digite 7");
 			
 			
@@ -29,25 +29,14 @@ public class Exercicio04 {
 			
 			switch(opcao) {
 			case 1:
-				for (int i = posicaoFinal; i < vetCarrinhoValores.length; i++) {
-					System.out.println(i);
-					System.out.println("Digite o nome do produto: ");
-					vetCarrinhoNomes[i] = leitor.next();
-					System.out.println("Digite o valor do produto: ");
-					vetCarrinhoValores[i] = leitor.nextDouble();
-					
-					
-					System.out.println("Deseja continuar acrescentando, digite 1 para continuar e 2 para sair");
-					opcao = leitor.nextInt();
-					posicaoFinal++;
-					
-					if(opcao == 2) {
-						i = vetCarrinhoValores.length;
-					}	
-				}
 				if(posicaoFinal == vetCarrinhoValores.length) {
 					System.out.println("Carrinho cheio");
-				}
+				}else {
+				System.out.println("Digite o nome do produto: ");
+				vetCarrinhoNomes[posicaoFinal] = leitor.next();
+				System.out.println("Digite o valor do produto: ");
+				vetCarrinhoValores[posicaoFinal] = leitor.nextDouble();
+				posicaoFinal++;}
 				System.out.println(posicaoFinal);
 				break;
 			
@@ -66,7 +55,7 @@ public class Exercicio04 {
 					}
 				}
 				if(controleNomes==1) {
-					System.out.println("Produto digitado nÃ£o encontrado.");
+					System.out.println("Produto digitado nÃo encontrado.");
 				}
 				break;
 			
@@ -75,7 +64,7 @@ public class Exercicio04 {
 				for (int i=0; i <= posicaoFinal; i++) {
 					totalCompra = totalCompra + vetCarrinhoValores[i];
 				}
-				System.out.println("O valor total da compra Ã© de R$ " + totalCompra);
+				System.out.println("O valor total da compra é de R$ " + totalCompra);
 				break;
 			
 			case 4:
@@ -96,11 +85,11 @@ public class Exercicio04 {
 						nomeProduto = vetCarrinhoNomes[i];
 					}
 				}
-				System.out.println("O produto de maior valor Ã© o " + nomeProduto);
+				System.out.println("O produto de maior valor é o " + nomeProduto);
 				break;
 			
 			case 6:
-				System.out.println("Os produtos que estÃ£o no carrinho sÃ£o: ");
+				System.out.println("Os produtos que estão no carrinho são: ");
 				for (int i=0; i <= posicaoFinal; i++) {
 					if(vetCarrinhoNomes[i] != null && vetCarrinhoNomes[i].length() != 0) {
 						System.out.println("Produto " + vetCarrinhoNomes[i] + " " + vetCarrinhoValores[i]);
